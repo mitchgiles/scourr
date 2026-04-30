@@ -9,13 +9,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --teal:      #00B4A6;
-  --teal-dark: #008F84;
-  --teal-pale: #E6F7F6;
-  --navy:      #1A2E44;
-  --sunny:     #FFD43B;
-  --coral:     #FF6B6B;
-  --foam:      #F5FFFE;
+  --teal:      #3849A0;
+  --teal-dark: #2A3680;
+  --teal-pale: #ECEFFE;
+  --navy:      #1C2460;
+  --sunny:     #D4B630;
+  --coral:     #E8A020;
+  --foam:      #F5F6FF;
   --off:       #F8F6F1;
   --text:      #1A2E44;
   --muted:     #6B7A8D;
@@ -44,20 +44,16 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,180,166,0.15);
+  border-bottom: 1px solid rgba(56,73,160,0.15);
   padding: 0 5%;
   display: flex; align-items: center; justify-content: space-between;
   height: 64px;
 }
 .nav-logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 1.6rem;
-  color: var(--navy);
   text-decoration: none;
-  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
 }
-.nav-logo span { color: var(--teal); }
 .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
 .nav-links a {
   font-size: 0.88rem;
@@ -101,7 +97,7 @@ section.active { display: block; }
 .bubble {
   position: absolute;
   border-radius: 50%;
-  border: 2px solid rgba(0,180,166,0.3);
+  border: 2px solid rgba(56,73,160,0.3);
 }
 .bubble::after {
   content: '';
@@ -111,20 +107,20 @@ section.active { display: block; }
   background: rgba(255,255,255,0.25);
   border-radius: 50%;
 }
-.b1 { width: 280px; height: 280px; top: -60px; right: 8%; background: rgba(0,180,166,0.12); }
-.b2 { width: 160px; height: 160px; top: 20%; right: 22%; background: rgba(0,180,166,0.08); }
-.b3 { width: 80px;  height: 80px;  top: 15%; right: 35%; background: rgba(255,212,59,0.2); border-color: rgba(255,212,59,0.4); }
-.b4 { width: 200px; height: 200px; bottom: 10%; right: 5%; background: rgba(0,180,166,0.07); }
-.b5 { width: 50px;  height: 50px;  bottom: 30%; right: 42%; background: rgba(255,107,107,0.2); border-color: rgba(255,107,107,0.4); }
-.b6 { width: 120px; height: 120px; bottom: 5%;  left: 10%; background: rgba(0,180,166,0.1); }
-.b7 { width: 40px;  height: 40px;  top: 40%;   left: 20%; background: rgba(255,212,59,0.25); border-color: rgba(255,212,59,0.5); }
+.b1 { width: 280px; height: 280px; top: -60px; right: 8%; background: rgba(56,73,160,0.12); }
+.b2 { width: 160px; height: 160px; top: 20%; right: 22%; background: rgba(56,73,160,0.08); }
+.b3 { width: 80px;  height: 80px;  top: 15%; right: 35%; background: rgba(212,182,48,0.2); border-color: rgba(212,182,48,0.4); }
+.b4 { width: 200px; height: 200px; bottom: 10%; right: 5%; background: rgba(56,73,160,0.07); }
+.b5 { width: 50px;  height: 50px;  bottom: 30%; right: 42%; background: rgba(232,160,32,0.2); border-color: rgba(232,160,32,0.4); }
+.b6 { width: 120px; height: 120px; bottom: 5%;  left: 10%; background: rgba(56,73,160,0.1); }
+.b7 { width: 40px;  height: 40px;  top: 40%;   left: 20%; background: rgba(212,182,48,0.25); border-color: rgba(212,182,48,0.5); }
 
 .hero-inner { position: relative; z-index: 2; max-width: 680px; }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--teal);
-  background: rgba(0,180,166,0.12);
+  background: rgba(56,73,160,0.12);
   padding: 6px 14px; border-radius: 50px;
   margin-bottom: 28px;
 }
@@ -176,7 +172,7 @@ section.active { display: block; }
 
 /* ── STRIP ── */
 .strip {
-  background: var(--teal);
+  background: var(--navy);
   padding: 14px 5%;
   display: flex; align-items: center; justify-content: center;
   gap: 48px; overflow: hidden;
@@ -186,7 +182,7 @@ section.active { display: block; }
   letter-spacing: 0.08em; text-transform: uppercase;
   white-space: nowrap; display: flex; align-items: center; gap: 8px;
 }
-.strip-dot { width: 5px; height: 5px; background: var(--sunny); border-radius: 50%; }
+.strip-dot { width: 5px; height: 5px; background: #D4B630; border-radius: 50%; }
 
 /* ── SECTION COMMON ── */
 .section-wrap { padding: 100px 5%; }
@@ -228,7 +224,7 @@ section.active { display: block; }
   color: white;
   letter-spacing: -0.03em;
 }
-.about-circle-bg .big-dot { color: var(--sunny); }
+.about-circle-bg .big-dot { color: #D4B630; }
 .about-circle-bg .tagline-sm {
   font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em;
   text-transform: uppercase; color: rgba(255,255,255,0.65);
@@ -247,11 +243,11 @@ section.active { display: block; }
   background: rgba(255,255,255,0.45);
   border-radius: 50%;
 }
-.mb1 { width: 60px; height: 60px; top: 20px; right: 40px; background: rgba(0,180,166,0.1); }
-.mb2 { width: 40px; height: 40px; top: 80px; left: 20px; background: rgba(255,212,59,0.2); border-color: var(--sunny); }
-.mb3 { width: 80px; height: 80px; bottom: 30px; right: 20px; background: rgba(0,180,166,0.08); }
-.mb4 { width: 30px; height: 30px; bottom: 80px; left: 50px; background: rgba(255,107,107,0.2); border-color: var(--coral); }
-.mb5 { width: 50px; height: 50px; top: 50%; left: -10px; background: rgba(0,180,166,0.12); }
+.mb1 { width: 60px; height: 60px; top: 20px; right: 40px; background: rgba(56,73,160,0.1); }
+.mb2 { width: 40px; height: 40px; top: 80px; left: 20px; background: rgba(212,182,48,0.2); border-color: var(--sunny); }
+.mb3 { width: 80px; height: 80px; bottom: 30px; right: 20px; background: rgba(56,73,160,0.08); }
+.mb4 { width: 30px; height: 30px; bottom: 80px; left: 50px; background: rgba(232,160,32,0.2); border-color: var(--coral); }
+.mb5 { width: 50px; height: 50px; top: 50%; left: -10px; background: rgba(56,73,160,0.12); }
 
 .about-features { display: flex; flex-direction: column; gap: 24px; margin-top: 40px; }
 .feature-row { display: flex; gap: 16px; align-items: flex-start; }
@@ -322,7 +318,7 @@ section.active { display: block; }
 }
 .pv-teal { background: var(--teal); }
 .pv-navy { background: var(--navy); }
-.pv-sunny { background: #FFF3CC; }
+.pv-sunny { background: #F9F0CC; }
 .product-circle {
   width: 140px; height: 140px;
   border-radius: 50%;
@@ -337,7 +333,7 @@ section.active { display: block; }
 }
 .product-circle .pdot { color: var(--sunny); }
 .product-circle .psize { font-size: 0.7rem; color: rgba(255,255,255,0.6); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
-.pv-sunny .product-circle { background: rgba(0,180,166,0.1); border-color: rgba(0,180,166,0.25); }
+.pv-sunny .product-circle { background: rgba(56,73,160,0.1); border-color: rgba(56,73,160,0.25); }
 .pv-sunny .pname { color: var(--navy); }
 .pv-sunny .psize { color: var(--muted); }
 .pv-sunny .pdot { color: var(--teal); }
@@ -364,14 +360,14 @@ section.active { display: block; }
 .trade-deco {
   position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
   width: 320px; height: 320px; border-radius: 50%;
-  background: rgba(0,180,166,0.12);
+  background: rgba(56,73,160,0.12);
   display: flex; align-items: center; justify-content: center;
   z-index: 1;
 }
 .trade-deco-inner {
   width: 220px; height: 220px; border-radius: 50%;
-  background: rgba(0,180,166,0.15);
-  border: 2px solid rgba(0,180,166,0.3);
+  background: rgba(56,73,160,0.15);
+  border: 2px solid rgba(56,73,160,0.3);
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
 }
@@ -415,7 +411,7 @@ section.active { display: block; }
   background: var(--teal-pale);
   border-radius: var(--radius);
   padding: 20px;
-  border: 1px solid rgba(0,180,166,0.2);
+  border: 1px solid rgba(56,73,160,0.2);
 }
 .term-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
 .term-value { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; }
@@ -428,7 +424,7 @@ section.active { display: block; }
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   gap: 12px; margin-top: 48px;
-  border: 1.5px dashed rgba(0,180,166,0.4);
+  border: 1.5px dashed rgba(56,73,160,0.4);
 }
 .stockists-note { font-size: 1.1rem; color: var(--teal); font-family: 'Syne', sans-serif; font-weight: 700; }
 .stockists-sub { font-size: 0.9rem; color: var(--muted); }
@@ -605,7 +601,18 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo" onclick="showSection('home')">Scourr<span>.</span></a>
+  <a href="#" class="nav-logo" onclick="showSection('home')" style="display:flex;align-items:center;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 70" height="42" aria-label="Scourr">
+  <!-- Bubble dots above the o -->
+  <circle cx="98" cy="6" r="4" fill="#3849A0"/>
+  <circle cx="98" cy="17" r="7" fill="#3849A0"/>
+  <!-- Scourr wordmark text -->
+  <text x="8" y="62" 
+    font-family="Arial Rounded MT Bold, Arial Black, sans-serif" 
+    font-weight="900" 
+    font-size="58" 
+    fill="#3849A0" 
+    letter-spacing="-1">Scourr</text>
+</svg></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#" onclick="showSection('home')">Home</a></li>
     <li><a href="#" onclick="showSection('shop')">Shop</a></li>
@@ -725,9 +732,9 @@ footer {
       <div class="product-card">
         <div class="product-visual pv-teal">
           <div class="pv-bubble" style="width:50px;height:50px;top:12px;right:18px;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.2);"></div>
-          <div class="pv-bubble" style="width:30px;height:30px;bottom:18px;left:22px;background:rgba(255,212,59,0.2);border-color:rgba(255,212,59,0.4);"></div>
+          <div class="pv-bubble" style="width:30px;height:30px;bottom:18px;left:22px;background:rgba(212,182,48,0.2);border-color:rgba(212,182,48,0.4);"></div>
           <div class="product-circle">
-            <div class="pname">Scourr<span class="pdot">.</span></div>
+            <div class="pname">Scourr</div>
             <div class="psize">2-pack</div>
           </div>
         </div>
@@ -740,10 +747,10 @@ footer {
 
       <div class="product-card">
         <div class="product-visual pv-navy">
-          <div class="pv-bubble" style="width:70px;height:70px;top:14px;left:16px;background:rgba(0,180,166,0.15);border-color:rgba(0,180,166,0.3);"></div>
-          <div class="pv-bubble" style="width:35px;height:35px;bottom:20px;right:24px;background:rgba(255,212,59,0.2);border-color:rgba(255,212,59,0.4);"></div>
+          <div class="pv-bubble" style="width:70px;height:70px;top:14px;left:16px;background:rgba(56,73,160,0.15);border-color:rgba(56,73,160,0.3);"></div>
+          <div class="pv-bubble" style="width:35px;height:35px;bottom:20px;right:24px;background:rgba(212,182,48,0.2);border-color:rgba(212,182,48,0.4);"></div>
           <div class="product-circle">
-            <div class="pname">Scourr<span class="pdot">.</span></div>
+            <div class="pname">Scourr</div>
             <div class="psize">3-pack — hero</div>
           </div>
         </div>
@@ -756,10 +763,10 @@ footer {
 
       <div class="product-card">
         <div class="product-visual pv-teal" style="background:#1A2E44;">
-          <div class="pv-bubble" style="width:55px;height:55px;top:18px;right:28px;background:rgba(255,107,107,0.15);border-color:rgba(255,107,107,0.3);"></div>
-          <div class="pv-bubble" style="width:40px;height:40px;bottom:22px;left:18px;background:rgba(0,180,166,0.2);border-color:rgba(0,180,166,0.4);"></div>
+          <div class="pv-bubble" style="width:55px;height:55px;top:18px;right:28px;background:rgba(232,160,32,0.15);border-color:rgba(232,160,32,0.3);"></div>
+          <div class="pv-bubble" style="width:40px;height:40px;bottom:22px;left:18px;background:rgba(56,73,160,0.2);border-color:rgba(56,73,160,0.4);"></div>
           <div class="product-circle">
-            <div class="pname">Scourr<span class="pdot">.</span></div>
+            <div class="pname">Scourr</div>
             <div class="psize">6-pack</div>
           </div>
         </div>
@@ -772,10 +779,10 @@ footer {
 
       <div class="product-card">
         <div class="product-visual pv-sunny">
-          <div class="pv-bubble" style="width:60px;height:60px;top:16px;right:20px;background:rgba(0,180,166,0.1);border-color:rgba(0,180,166,0.2);"></div>
-          <div class="pv-bubble" style="width:28px;height:28px;bottom:24px;left:28px;background:rgba(255,107,107,0.15);border-color:rgba(255,107,107,0.3);"></div>
+          <div class="pv-bubble" style="width:60px;height:60px;top:16px;right:20px;background:rgba(56,73,160,0.1);border-color:rgba(56,73,160,0.2);"></div>
+          <div class="pv-bubble" style="width:28px;height:28px;bottom:24px;left:28px;background:rgba(232,160,32,0.15);border-color:rgba(232,160,32,0.3);"></div>
           <div class="product-circle">
-            <div class="pname" style="color:var(--navy);">Scourr<span style="color:var(--teal);">.</span></div>
+            <div class="pname" style="color:var(--navy);">Scourr</div>
             <div class="psize" style="color:var(--muted);">XL single</div>
           </div>
         </div>
@@ -909,7 +916,7 @@ footer {
     <div class="about-grid">
       <div class="about-visual">
         <div class="about-circle-bg">
-          <div class="big-name">Scourr<span class="big-dot">.</span></div>
+          <div class="big-name" style="color:white;font-family:Arial Black,sans-serif;">Scourr</div>
           <div class="tagline-sm">EU / UK</div>
         </div>
         <div class="mini-bub mb1"></div>
@@ -1065,7 +1072,7 @@ footer {
           </div>
         </div>
 
-        <div style="background:var(--teal-pale);border-radius:var(--radius);padding:24px;border:1px solid rgba(0,180,166,0.2);margin-top:8px;">
+        <div style="background:var(--teal-pale);border-radius:var(--radius);padding:24px;border:1px solid rgba(56,73,160,0.2);margin-top:8px;">
           <h4 style="font-size:1rem;margin-bottom:8px;color:var(--teal-dark);">Trade buyers</h4>
           <p style="font-size:0.88rem;color:var(--muted);line-height:1.65;">Request our full trade pack — includes pricing sheet, sample request form, display unit options, and sell-in materials. We typically respond within one working day.</p>
         </div>
@@ -1117,7 +1124,18 @@ footer {
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <div class="logo">Scourr<span>.</span></div>
+      <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 70" height="36" aria-label="Scourr">
+  <!-- Bubble dots above the o -->
+  <circle cx="98" cy="6" r="4" fill="#3849A0"/>
+  <circle cx="98" cy="17" r="7" fill="#3849A0"/>
+  <!-- Scourr wordmark text -->
+  <text x="8" y="62" 
+    font-family="Arial Rounded MT Bold, Arial Black, sans-serif" 
+    font-weight="900" 
+    font-size="58" 
+    fill="#3849A0" 
+    letter-spacing="-1">Scourr</text>
+</svg></div>
       <p>The premium cotton reusable cleaning pad. Too good to hide. Too honest to hype. Built for the EU &amp; UK market.</p>
     </div>
     <div class="footer-col">
@@ -1172,7 +1190,7 @@ function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target;
   btn.textContent = '✓ Message sent!';
-  btn.style.background = '#008F84';
+  btn.style.background = '#2A3680';
   setTimeout(() => {
     btn.textContent = 'Send Message →';
     btn.style.background = '';
